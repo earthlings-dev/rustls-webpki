@@ -15,8 +15,8 @@
 [package]
 categories = ["cryptography", "no-std"]
 description = "Web PKI X.509 Certificate Verification."
-edition = "2021"
-rust-version = "1.83"
+edition = "2024"
+rust-version = "1.93"
 license = "ISC"
 name = "rustls-webpki"
 readme = "README.md"
@@ -76,15 +76,15 @@ alloc = ["pki-types/alloc"]
 std = ["alloc", "pki-types/std"]
 
 [dependencies]
-pki-types = { package = "rustls-pki-types", version = "1.13", default-features = false }
+pki-types = { package = "rustls-pki-types", version = "1.14", default-features = false }
 untrusted = "0.9"
 
 [dev-dependencies]
 base64 = "0.22"
 bencher = "0.1.5"
 bzip2 = "0.6"
-once_cell = "1.17.2"
-rcgen = { version = "0.14.2", default-features = false, features = ["aws_lc_rs"] }
+once_cell = "1.21.3"
+rcgen = { version = "0.14.7", default-features = false, features = ["aws_lc_rs"] }
 rustls-aws-lc-rs = { version = "0.1.0-dev.0" }
 rustls-ring = { version = "0.1.0-dev.0" }
 serde = { version = "1.0", features = ["derive"] }
